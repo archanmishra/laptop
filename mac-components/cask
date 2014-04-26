@@ -1,0 +1,4 @@
+fancy_echo "Installing brew cask ..."
+  brew tap phinze/cask
+  brew tap caskroom/versions
+  brew install brew-cask

@@ -1,0 +1,2 @@
+fancy_echo "Installing intellij machine ..."
+  brew cask install intellij-idea

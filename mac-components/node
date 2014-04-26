@@ -1,0 +1,2 @@
+fancy_echo "Installing node js ..."
+  brew cask install https://github.com/aakn/laptop/blob/master/casks/node.rb

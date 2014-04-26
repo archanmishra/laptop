@@ -1,2 +1,2 @@
-fancy_echo "Changing your shell to zsh ..."
-  chsh -s $(which zsh)
+fancy_echo "Installing oh-my-zsh ..."
+  curl -L http://install.ohmyz.sh | sh
