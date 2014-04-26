@@ -13,7 +13,6 @@ mac-components/rbenv
 mac-components/compiler-and-libraries
 mac-components/node
 mac-components/java
-common-components/ruby-environment
 mac-components/bundler
 mac-components/github
 mac-components/rcm

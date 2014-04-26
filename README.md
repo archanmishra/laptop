@@ -1,7 +1,7 @@
 Laptop
 ======
 
-Laptop is a script to set up a Mac OS X or Linux laptop for Rails development.
+Laptop is a script to set up a Mac OS X Laptop for development in SMS.
 
 Requirements
 ------------
@@ -20,16 +20,6 @@ For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
 to accept the XCode agreement.  Then run `xcode-select --install` in your
 terminal and then click "Install".
 
-### Linux
-
-We support:
-
-* [14.04: Trusty Tahr](https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes),
-* [13.10: Saucy Salamander](https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes),
-* [12.04 LTS: Precise Pangolin](https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes),
-* Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
-* Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
-
 Install
 -------
 
@@ -37,13 +27,7 @@ Install
 
 Read, then run the script:
 
-    bash <(curl -s https://raw.github.com/aakn/laptop/master/mac)
-
-### Linux
-
-Read, then run the script:
-
-    bash <(wget -qO- https://raw.github.com/aakn/laptop/master/linux)
+    bash <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/mac)
 
 What it sets up
 ---------------
@@ -52,23 +36,20 @@ What it sets up
 * Bundler gem for managing Ruby libraries
 * Exuberant Ctags for indexing files for vim tab completion
 * Foreman gem for serving Rails apps locally
-* Heroku Config plugin for local `ENV` variables
-* Heroku Toolbelt for interacting with the Heroku API
+* Git for version control
 * Hub gem for interacting with the GitHub API
 * Homebrew for managing operating system libraries (OS X only)
+* Homebrew cask for installing applications
 * ImageMagick for cropping and resizing images
-* Postgres for storing relational data
-* Qt for headless JavaScript testing via Capybara Webkit
-* Rails gem for writing web applications
-* Rbenv for managing versions of the Ruby programming language
+* Mysql for storing relational data
 * Redis for storing key-value data
-* Ruby Build for installing Rubies
-* Ruby stable for writing general-purpose code
 * The Silver Searcher for finding things in files
 * Tmux for saving project state and switching between projects
 * Watch for periodically executing a program and displaying the output
+* Apps - Google Chrome, Sequel Pro, Iterm, TunnelBlick, Sublime Text, etc
+* IDEs - Intellij IDEA
 
-It should take less than 15 minutes to install (depends on your machine).
+It should take less than 30 minutes to install (depends on your machine).
 
 Make your own customizations
 ----------------------------
@@ -84,24 +65,3 @@ Put your customizations in `~/.laptop.local`. For example, your
     brew cask install dropbox
     brew cask install google-chrome
     brew cask install rdio
-
-Credits
--------
-
-![thoughtbot](http://thoughtbot.com/assets/tm/logo.png)
-
-Laptop is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community).
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-Thank you, [contributors](https://github.com/thoughtbot/laptop/graphs/contributors)!
-
-Contributing
-------------
-
-Please see [CONTRIBUTING.md](https://github.com/thoughtbot/laptop/blob/master/CONTRIBUTING.md).
-
-License
--------
-
-Laptop is © 2011-2014 thoughtbot, inc. It is free software, and may be
-redistributed under the terms specified in the LICENSE file.

@@ -1,2 +1,2 @@
 fancy_echo "Installing node js ..."
-  brew cask install https://github.com/aakn/laptop/blob/master/casks/node.rb
+  brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb

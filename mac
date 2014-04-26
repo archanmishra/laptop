@@ -126,36 +126,15 @@ fancy_echo "Installing ruby-build, to install Rubies ..."
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl
   brew link openssl --force
-  brew install curl-ca-bundle
 ### end mac-components/compiler-and-libraries
 
 fancy_echo "Installing node js ..."
-  brew cask install https://github.com/aakn/laptop/blob/master/casks/node.rb
+  brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb
 ### end mac-components/node
 
 fancy_echo "Installing java7 ..."
   brew cask install java7
 ### end mac-components/java
-
-ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
-
-fancy_echo "Installing Ruby $ruby_version ..."
-  if [ "$ruby_version" = "2.1.1" ]; then
-    curl -fsSL https://gist.github.com/mislav/a18b9d7f0dc5b9efc162.txt | rbenv install --patch 2.1.1
-  else
-    rbenv install "$ruby_version"
-  fi
-
-fancy_echo "Setting $ruby_version as global default Ruby ..."
-  rbenv global "$ruby_version"
-  rbenv rehash
-
-fancy_echo "Updating to latest Rubygems version ..."
-  gem update --system
-
-fancy_echo "Installing Bundler to install project-specific Ruby gems ..."
-  gem install bundler --no-document --pre
-### end common-components/ruby-environment
 
 fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
   number_of_cores=$(sysctl -n hw.ncpu)
