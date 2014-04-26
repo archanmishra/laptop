@@ -162,6 +162,8 @@ fancy_echo "Installing default apps on your machine ..."
   brew cask install tunnelblick
   brew cask install sublime-text3
   brew cask install alfred
+  brew cask alfred link
+  brew cask install mou
 ### end mac-components/apps
 
 fancy_echo "Installing intellij machine ..."
