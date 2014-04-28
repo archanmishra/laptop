@@ -1,0 +1,5 @@
+fancy_echo "Setting up your ssh private key ..."
+  ssh-keygen -t rsa
+
+fancy_echo "Installing ssh-copy-id, to make it simpler to copy your public key to a remote machine ..."
+  brew install ssh-copy-id
