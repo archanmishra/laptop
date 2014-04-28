@@ -1,0 +1,25 @@
+fancy_echo "Cloning the sms repo ..."
+  mkdir -p ~/dev/
+  git clone git.corp.flipkart.com:/git/sp/sms sms
+
+  fancy_echo "Setting up sms backend ..."
+    cd ~/dev/sms/sp-onboarding-be
+    mkdir uploads
+    mkdir logs
+
+    npm install
+
+  fancy_echo "Setting up mysql database ..."
+    echo "create database seller_platform" | mysql -uroot
+    echo 'create database seller_platform_audit;' | mysql -uroot
+    ./.bin/sequelize --migrate
+
+  fancy_echo "Setting up seller dashboard ..."
+    cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard
+    mkdir pidServer
+    mkdir logs
+
+    npm install
+
+  fancy_echo "Installing the arc certificate ..."
+    arc install-certificate

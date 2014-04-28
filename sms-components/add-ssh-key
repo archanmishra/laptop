@@ -1,0 +1,3 @@
+fancy_echo "Adding ssh-keys to remote hosts ..."
+  fancy_echo "Please enter your ldap password when asked for ..."
+  ssh-copy-id git.corp.flipkart.com

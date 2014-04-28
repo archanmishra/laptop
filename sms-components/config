@@ -1,0 +1,2 @@
+fancy_echo "Setting up a few configs ..."
+  npm config set registry http://npm.stage.ch.flipkart.com/registry/
