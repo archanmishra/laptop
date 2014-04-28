@@ -34,6 +34,8 @@ fancy_echo() {
 
 fancy_echo "Installing oh-my-zsh ..."
   curl -L http://install.ohmyz.sh | sh
+  touch ~/.zprofile
+  echo "source ~/.zprofile" >> ~/.zshrc
 ### end common-components/zsh
 
 if [[ -f /etc/zshenv ]]; then
@@ -65,6 +67,13 @@ fancy_echo "Installing brew cask ..."
   brew tap caskroom/versions
   brew install brew-cask
 ### end mac-components/cask
+
+fancy_echo "Setting up your ssh private key ..."
+  ssh-keygen -t rsa
+
+fancy_echo "Installing ssh-copy-id, to make it simpler to copy your public key to a remote machine ..."
+  brew install ssh-copy-id
+### end mac-components/ssh
 
 fancy_echo "Installing MySql 5.5, a good old RBDMS ..."
   brew install mysql55

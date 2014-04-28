@@ -25,9 +25,13 @@ Install
 
 ### Mac OS X
 
-Read, then run the script:
+Read, then run the script (Use an ethernet cable for faster downloads):
 
     bash <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/mac)
+
+Once you get your ldap credentials:
+
+    bash <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/ldap)
 
 What it sets up
 ---------------
@@ -35,12 +39,10 @@ What it sets up
 * Zsh as your shell
 * Bundler gem for managing Ruby libraries
 * Exuberant Ctags for indexing files for vim tab completion
-* Foreman gem for serving Rails apps locally
 * Git for version control
 * Hub gem for interacting with the GitHub API
 * Homebrew for managing operating system libraries (OS X only)
 * Homebrew cask for installing applications
-* ImageMagick for cropping and resizing images
 * Mysql for storing relational data
 * Redis for storing key-value data
 * The Silver Searcher for finding things in files
@@ -49,7 +51,15 @@ What it sets up
 * Apps - Google Chrome, Sequel Pro, Iterm, TunnelBlick, Sublime Text, etc
 * IDEs - Intellij IDEA
 
-It should take less than 30 minutes to install (depends on your machine).
+What the LDAP script sets up
+----------------------------
+
+* Phabricator for code reviews
+* Sets up npm configuration
+* Clone sms repo
+
+
+It should take less than an hour to install (depends on your machine).
 
 Make your own customizations
 ----------------------------
