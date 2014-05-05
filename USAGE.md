@@ -1,3 +1,20 @@
+Getting Started
+===============
+
+TODO
+----
+### Account
+To checkout code we need LDAP account.
+
+* To create LDAP account, we need employee ID
+
+* Employee ID is created by HR Business Partner (Saurabh Gurwara)
+
+* Send a mail to IT support to create LDAP account (itsupport@flipkart.com)
+
+* Once received, login to [Old Console](https://old-console.nm.flipkart.com/console/login) and CHANGE password. Then only your account will be activated.
+
+
 Requirements
 ------------
 
@@ -5,13 +22,13 @@ Requirements
 
 Install a C compiler:
 
-For Snow Leopard (10.6): use [OS X GCC
+* For Snow Leopard (10.6): use [OS X GCC
 Installer](https://github.com/kennethreitz/osx-gcc-installer/).
 
-For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for
+* For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for
 XCode](https://developer.apple.com/downloads/index.action).
 
-For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
+* For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
 to accept the XCode agreement.  Then run `xcode-select --install` in your
 terminal and then click "Install".
 
@@ -119,7 +136,7 @@ Send a mail to itsupport@flipkart.com with the group id's you need to be added. 
 * FSN : Flipkart Serial No. (Unique product Id)
 * Head FSN : Products with top pageviews (Band 4 and 5) [Band 5 : top 20% pageviews]
 * MT : Mobile and Tablets
-* SPL : Seller Prioritisation Logic
+* SPL : Seller Prioritization Logic
 * RTO : Returned to Origin (returned because of either non-delivery or the customer returned the product at the door, without opening it)
 * RVP : Reversed Product (???)
 * Courier Returns : The product was opened by the user and returned later (???)
