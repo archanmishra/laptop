@@ -65,6 +65,8 @@ brew update
 fancy_echo "Installing brew cask ..."
   brew tap phinze/cask
   brew tap caskroom/versions
+  brew tap homebrew/versions
+  brew tap homebrew/dupes
   brew install brew-cask
 ### end mac-components/cask
 
@@ -109,7 +111,7 @@ fancy_echo "Install couchbase, a session store ..."
 fancy_echo "Starting MySql ..."
   ln -sfv /usr/local/opt/mysql55/*.plist ~/Library/LaunchAgents
   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql55.plist
-  mysql.server start
+  
 ### end mac-components/start-services
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
