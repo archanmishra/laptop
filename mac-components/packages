@@ -1,5 +1,5 @@
-fancy_echo "Installing MySql 5.5, a good old RBDMS ..."
-  brew install mysql55
+fancy_echo "Installing MySql, a good old RBDMS ..."
+  brew install mysql
 
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis

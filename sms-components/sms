@@ -1,6 +1,10 @@
 fancy_echo "Cloning the sms repo ..."
   mkdir -p ~/dev/
+  cd ~/dev/
   git clone git.corp.flipkart.com:/git/sp/sms sms
+
+  fancy_echo "Settign ulimit to 8192 for npm installs ..."
+    ulimit -n 8192
 
   fancy_echo "Setting up sms backend ..."
     cd ~/dev/sms/sp-onboarding-be

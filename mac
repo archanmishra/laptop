@@ -77,8 +77,8 @@ fancy_echo "Installing ssh-copy-id, to make it simpler to copy your public key t
   brew install ssh-copy-id
 ### end mac-components/ssh
 
-fancy_echo "Installing MySql 5.5, a good old RBDMS ..."
-  brew install mysql55
+fancy_echo "Installing MySql, a good old RBDMS ..."
+  brew install mysql
 
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
@@ -114,26 +114,6 @@ fancy_echo "Starting MySql ..."
   
 ### end mac-components/start-services
 
-fancy_echo "Installing rbenv, to change Ruby versions ..."
-  brew install rbenv
-
-  if ! grep -qs "rbenv init" ~/.zshrc; then
-    printf 'export PATH="$HOME/.rbenv/bin:$PATH"\n' >> ~/.zshrc
-    printf 'eval "$(rbenv init - --no-rehash)"\n' >> ~/.zshrc
-
-    fancy_echo "Enable shims and autocompletion ..."
-      eval "$(rbenv init -)"
-  fi
-
-  export PATH="$HOME/.rbenv/bin:$PATH"
-
-fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
-  brew install rbenv-gem-rehash
-
-fancy_echo "Installing ruby-build, to install Rubies ..."
-  brew install ruby-build
-### end mac-components/rbenv
-
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl
   brew link openssl --force
@@ -147,24 +127,10 @@ fancy_echo "Installing java7 ..."
   brew cask install java7
 ### end mac-components/java
 
-fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
-  number_of_cores=$(sysctl -n hw.ncpu)
-  bundle config --global jobs $((number_of_cores - 1))
-### end mac-components/bundler
-
 fancy_echo "Installing GitHub CLI client ..."
   brew install git
   brew install hub
 ### end mac-components/github
-
-if ! command -v rcup &>/dev/null; then
-  fancy_echo "Installing rcm, to manage your dotfiles ..."
-    brew tap thoughtbot/formulae
-    brew install rcm
-else
-  fancy_echo "rcm already installed. Skipping ..."
-fi
-### end mac-components/rcm
 
 fancy_echo "Installing default apps on your machine ..."
   brew cask install google-chrome
