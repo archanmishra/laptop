@@ -36,6 +36,7 @@ fancy_echo "Installing oh-my-zsh ..."
   curl -L http://install.ohmyz.sh | sh
   touch ~/.zprofile
   echo "source ~/.zprofile" >> ~/.zshrc
+  source ~/.zshrc
 ### end common-components/zsh
 
 if [[ -f /etc/zshenv ]]; then
@@ -121,6 +122,9 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 
 fancy_echo "Installing node js ..."
   brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb
+  npm install -g n
+  n 0.8.26
+  npm install -g npm
 ### end mac-components/node
 
 fancy_echo "Installing java7 ..."

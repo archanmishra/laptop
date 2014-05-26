@@ -2,3 +2,4 @@ fancy_echo "Installing oh-my-zsh ..."
   curl -L http://install.ohmyz.sh | sh
   touch ~/.zprofile
   echo "source ~/.zprofile" >> ~/.zshrc
+  source ~/.zshrc
