@@ -109,8 +109,8 @@ fancy_echo "Install couchbase, a session store ..."
 ### end mac-components/packages
 
 fancy_echo "Starting MySql ..."
-  ln -sfv /usr/local/opt/mysql55/*.plist ~/Library/LaunchAgents
-  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql55.plist
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
   
 ### end mac-components/start-services
 
