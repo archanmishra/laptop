@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 ### end common-components/bash-shebang
 
 # Welcome to the thoughtbot laptop script! Be prepared to turn your laptop (or
@@ -36,7 +36,6 @@ fancy_echo "Installing oh-my-zsh ..."
   curl -L http://install.ohmyz.sh | sh
   touch ~/.zprofile
   echo "source ~/.zprofile" >> ~/.zshrc
-  exec zsh
   source ~/.zshrc
 ### end common-components/zsh
 

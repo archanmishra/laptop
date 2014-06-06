@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 ### end common-components/bash-shebang
 
 # Welcome to the thoughtbot laptop script! Be prepared to turn your laptop (or
