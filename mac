@@ -122,6 +122,7 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 
 fancy_echo "Installing node js ..."
   brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb
+  sudo chmod -R 777 /usr/local/lib/node_modules
   npm install -g n
   n 0.8.26
   npm install -g npm
