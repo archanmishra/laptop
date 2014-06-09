@@ -39,11 +39,11 @@ Install
 
 Read, then run the script (Use an ethernet cable for faster downloads):
 
-    bash <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/mac)
+    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/mac)
 
 Once you get your ldap credentials:
 
-    bash <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/ldap)
+    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/ldap)
 
 What it sets up
 ---------------
