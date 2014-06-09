@@ -16,7 +16,7 @@ fancy_echo "Cloning the sms repo ..."
   fancy_echo "Setting up mysql database ..."
     echo "create database seller_platform" | mysql -uroot
     echo 'create database seller_platform_audit;' | mysql -uroot
-    ./.bin/sequelize --migrate
+    ./node_modules/.bin/sequelize --migrate
 
   fancy_echo "Setting up seller dashboard ..."
     cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard
