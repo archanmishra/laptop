@@ -117,6 +117,12 @@ fancy_echo "Upgrading and linking OpenSSL ..."
   brew link openssl --force
 ### end mac-components/compiler-and-libraries
 
+fancy_echo "Setting up pip ..."
+	sudo easy_install pip
+
+fancy_echo "Installing fabric ..."
+	sudo pip install fabric### end mac-components/pip
+
 fancy_echo "Installing node js ..."
   brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb
   sudo chmod -R 777 /usr/local/lib/node_modules

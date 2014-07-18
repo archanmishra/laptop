@@ -1,0 +1,5 @@
+fancy_echo "Setting up pip ..."
+	sudo easy_install pip
+
+fancy_echo "Installing fabric ..."
+	sudo pip install fabric
