@@ -129,7 +129,7 @@ fancy_echo "Installing node js ..."
   sudo chmod -R 777 /usr/local/lib/node_modules
   npm install -g n
   n 0.8.26
-  npm install -g npm
+  npm install -g npm@1.4.13
 ### end mac-components/node
 
 fancy_echo "Installing java7 ..."
