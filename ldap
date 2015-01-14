@@ -39,40 +39,4 @@ fancy_echo "Setting up phabricator for code reviews ... You'll have to create a 
   git clone git://github.com/facebook/arcanist.git
   echo "export PATH=$PATH:~/dev/phabricator/arcanist/bin" >> ~/.zprofile
   source ~/.zshrc
-### end sms-components/arc
-
-fancy_echo "Setting up a few configs ..."
-  npm config set registry http://npm.stage.ch.flipkart.com/registry/
-### end sms-components/config
-
-fancy_echo "Cloning the sms repo ..."
-  mkdir -p ~/dev/
-  cd ~/dev/
-  git clone git.corp.flipkart.com:/git/sp/sms sms
-
-  fancy_echo "Settign ulimit to 8192 for npm installs ..."
-    ulimit -n 8192
-
-  fancy_echo "Setting up sms backend ..."
-    cd ~/dev/sms/sp-onboarding-be
-    mkdir uploads
-    mkdir logs
-
-    npm install
-
-  fancy_echo "Setting up mysql database ..."
-    echo "create database seller_platform" | mysql -uroot
-    echo 'create database seller_platform_audit;' | mysql -uroot
-    ./node_modules/.bin/sequelize --migrate
-
-  fancy_echo "Setting up seller dashboard ..."
-    cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard
-    mkdir pidServer
-    mkdir logs
-
-    npm install
-
-  fancy_echo "Installing the arc certificate ..."
-    arc install-certificate
-### end sms-components/sms
-
+  
