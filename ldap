@@ -39,4 +39,4 @@ fancy_echo "Setting up phabricator for code reviews ... You'll have to create a 
   git clone git://github.com/facebook/arcanist.git
   echo "export PATH=$PATH:~/dev/phabricator/arcanist/bin" >> ~/.zprofile
   source ~/.zshrc
-  
+### end sms-components/arc
