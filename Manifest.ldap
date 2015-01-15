@@ -1,6 +1,0 @@
-common-components/bash-shebang
-common-components/header
-common-components/exit-trap
-common-components/check-home-bin
-common-components/shared-functions
-sms-components/arc
