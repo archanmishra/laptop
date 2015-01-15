@@ -41,7 +41,4 @@ fancy_echo "Cloning the seller-oms repo ..."
     echo "create database seller_oms" | mysql -uroot
     cd ./seller-oms
     ./gradlew dbMigrate
-
-  fancy_echo "Installing the arc certificate ..."
-    arc install-certificate
-  ### end oms-components/oms
+### end oms-components/oms
