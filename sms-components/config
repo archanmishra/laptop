@@ -1,2 +1,5 @@
 fancy_echo "Setting up a few configs ..."
   npm config set registry http://npm.stage.ch.flipkart.com/registry/
+
+fancy_echo "Settign ulimit to 8192 for npm installs ..."
+  ulimit -n 8192
