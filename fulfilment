@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+### end common-components/bash-shebang
+
+# Welcome to the thoughtbot laptop script! Be prepared to turn your laptop (or
+# desktop, no haters here) into an awesome development machine.
+
+# This file is auto-generated. Do not edit it by hand unless you know what
+# you're doing. Please see 'CONTRIBUTING.md' for more information.
+### end common-components/header
+
+trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
+
+set -e
+### end common-components/exit-trap
+
+if [[ ! -d "$HOME/.bin/" ]]; then
+  mkdir "$HOME/.bin"
+fi
+
+if [ ! -f "$HOME/.zshrc" ]; then
+  touch $HOME/.zshrc
+fi
+
+if [[ ":$PATH:" != *":$HOME/.bin:"* ]]; then
+  printf 'export PATH="$HOME/.bin:$PATH"\n' >> ~/.zshrc
+  export PATH="$HOME/.bin:$PATH"
+fi
+### end common-components/check-home-bin
+
+fancy_echo() {
+  printf "\n%b\n" "$1"
+}
+### end common-components/shared-functions
+
+fancy_echo "Cloning the seller-oms repo ..."
+  mkdir -p ~/dev/
+  cd ~/dev/
+  git clone git.corp.flipkart.com:/git/sp/fulfilment/seller-oms.git seller-oms
+
+  fancy_echo "Setting up mysql database ..."
+    echo "create database seller_oms" | mysql -uroot
+    cd ./seller-oms
+    ./gradlew dbMigrate
+### end oms-components/oms
+
+fancy_echo "Installing the arc certificate ..."
+  arc install-certificate
+### end common-components/certificate

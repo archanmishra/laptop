@@ -31,7 +31,7 @@ Read, then run the script (Use an ethernet cable for faster downloads):
 
 Once you get your ldap credentials:
 
-    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/ldap)
+    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/fulfilment)
 
 What it sets up
 ---------------
@@ -50,13 +50,13 @@ What it sets up
 * Watch for periodically executing a program and displaying the output
 * Apps - Google Chrome, Sequel Pro, Iterm, TunnelBlick, Sublime Text, etc
 * IDEs - Intellij IDEA
+* Phabricator for code reviews
 
-What the LDAP script sets up
+What the Fulfilment script sets up
 ----------------------------
 
-* Phabricator for code reviews
-* Sets up npm configuration
-* Clone sms repo
+* Clone seller-oms repo
+* Installs certificate for code reviews using phabricator
 
 
 It should take less than an hour to install (depends on your machine).

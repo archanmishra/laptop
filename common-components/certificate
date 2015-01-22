@@ -1,0 +1,3 @@
+fancy_echo "Installing the arc certificate ..."
+  arc install-certificate
+### end common-components/certificate
