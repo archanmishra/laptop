@@ -1,0 +1,11 @@
+fancy_echo "Cloning the sms repo ..."
+	mkdir -p ~/dev/
+	cd ~/dev/
+	git clone git.corp.flipkart.com:/git/sp/sms sms
+
+fancy_echo "Setting up seller dashboard ..."
+	cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard
+	mkdir pidServer
+	mkdir logs
+
+	npm install
