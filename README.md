@@ -58,6 +58,11 @@ What the Fulfilment script sets up
 * Clone seller-oms repo
 * Installs certificate for code reviews using phabricator
 
+What the UI script sets up
+----------------------------
+
+* Clone sms repo and set up seller dashboard
+* Installs certificate for code reviews using phabricator
 
 It should take less than an hour to install (depends on your machine).
 
