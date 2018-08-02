@@ -42,7 +42,5 @@ fancy_echo "Cloning the seller-oms repo ..."
     cd ./seller-oms
     ./gradlew dbMigrate
 ### end oms-components/oms
+### end oms-components/oms
 
-fancy_echo "Installing the arc certificate ..."
-  arc install-certificate
-### end common-components/certificate

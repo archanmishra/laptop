@@ -10,12 +10,6 @@ Requirements
 
 Install a C compiler:
 
-For Snow Leopard (10.6): use [OS X GCC
-Installer](https://github.com/kennethreitz/osx-gcc-installer/).
-
-For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for
-XCode](https://developer.apple.com/downloads/index.action).
-
 For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
 to accept the XCode agreement.  Then run `xcode-select --install` in your
 terminal and then click "Install".
@@ -27,11 +21,7 @@ Install
 
 Read, then run the script (Use an ethernet cable for faster downloads):
 
-    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/mac)
-
-Once you get your ldap credentials:
-
-    zsh <(curl -s https://raw.githubusercontent.com/aakn/laptop/master/fulfilment)
+    zsh <(curl -s https://raw.githubusercontent.com/archanmishra/laptop/master/mac)
 
 What it sets up
 ---------------
@@ -48,7 +38,7 @@ What it sets up
 * The Silver Searcher for finding things in files
 * Tmux for saving project state and switching between projects
 * Watch for periodically executing a program and displaying the output
-* Apps - Google Chrome, Sequel Pro, Iterm, TunnelBlick, Sublime Text, etc
+* Apps - Google Chrome, Sequel Pro, Iterm, Sublime Text, etc
 * IDEs - Intellij IDEA
 * Phabricator for code reviews
 

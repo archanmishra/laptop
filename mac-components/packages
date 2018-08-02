@@ -24,3 +24,6 @@ fancy_echo "Installing couchdb, another nosql database ..."
 
 fancy_echo "Install couchbase, a session store ..."
   brew cask install couchbase-server-community
+
+fancy_echo "Install node, for yo modules to generate dropwizard template"
+  brew cask install node

@@ -32,27 +32,23 @@ fancy_echo() {
 }
 ### end common-components/shared-functions
 
-fancy_echo "Setting up a few configs ..."		
-  npm config set registry http://npm.stage.ch.flipkart.com/registry/		
+fancy_echo "Setting up a few configs ..."
+  npm config set registry http://10.85.59.116/artifactory/v1.0/artifacts/npm/
 
 fancy_echo "Settign ulimit to 8192 for npm installs ..."
   ulimit -n 8192
 ### end ui-components/node-config
 
-fancy_echo "Cloning the sms repo ..."		
-	mkdir -p ~/dev/		
-	cd ~/dev/		
-	git clone git.corp.flipkart.com:/git/sp/sms sms		
-	
-	fancy_echo "Setting up seller dashboard ..."		
-	  cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard		
-	  mkdir pidServer		
-	  mkdir logs		
-	
-	  npm install		
-	
-### end ui-components/seller-dashboard	
-	
-fancy_echo "Installing the arc certificate ..."
-  arc install-certificate
-### end common-components/certificate
+fancy_echo "Cloning the sms repo ..."
+	mkdir -p ~/dev/
+	cd ~/dev/
+	git clone git.corp.flipkart.com:/git/sp/sms sms
+
+fancy_echo "Setting up seller dashboard ..."
+	cd ~/dev/sms/sp-seller-dashboard/sp-seller-dashboard
+	mkdir pidServer
+	mkdir logs
+
+	npm install
+### end ui-components/seller-dashboard
+

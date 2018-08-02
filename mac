@@ -105,6 +105,9 @@ fancy_echo "Installing couchdb, another nosql database ..."
 
 fancy_echo "Install couchbase, a session store ..."
   brew cask install couchbase-server-community
+
+fancy_echo "Install node, for yo modules to generate dropwizard template"
+  brew cask install node
 ### end mac-components/packages
 
 fancy_echo "Starting MySql ..."
@@ -124,17 +127,8 @@ fancy_echo "Setting up pip ..."
 fancy_echo "Installing fabric ..."
 	sudo pip install fabric### end mac-components/pip
 
-fancy_echo "Installing node js ..."
-  brew cask install https://raw.githubusercontent.com/aakn/laptop/master/casks/node.rb
-  sudo chmod -R 777 /usr/local/lib/node_modules
-  npm install -g n
-  n 0.8.26
-  npm install -g npm@1.4.13
-### end mac-components/node
-
 fancy_echo "Installing java7 ..."
-  brew cask install java7
-### end mac-components/java
+ brew cask install java### end mac-components/java
 
 fancy_echo "Installing GitHub CLI client ..."
   brew install git
@@ -145,10 +139,7 @@ fancy_echo "Installing default apps on your machine ..."
   brew cask install google-chrome
   brew cask install iterm2
   brew cask install sequel-pro
-  brew cask install tunnelblick
   brew cask install sublime-text3
-  brew cask install alfred
-  brew cask alfred link
   brew cask install mou
 ### end mac-components/apps
 
@@ -156,18 +147,16 @@ fancy_echo "Installing intellij machine ..."
   brew cask install intellij-idea
 ### end mac-components/ide
 
+fancy_echo "Setting up a few configs ..."
+  npm config set registry http://10.85.59.116/artifactory/v1.0/artifacts/npm/
+
+fancy_echo "Settign ulimit to 8192 for npm installs ..."
+  ulimit -n 8192
+### end ui-components/node-config
+
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
   if [[ -f ~/.laptop.local ]]; then
     source ~/.laptop.local
   fi
 ### end common-components/personal-additions
-
-fancy_echo "Setting up phabricator for code reviews ... You'll have to create a phabricator account by logging in to http://phabricator.corp.flipkart.com ..."
-  mkdir -p ~/dev/phabricator
-  cd ~/dev/phabricator
-  git clone git://github.com/facebook/libphutil.git
-  git clone git://github.com/facebook/arcanist.git
-  echo "export PATH=$PATH:~/dev/phabricator/arcanist/bin" >> ~/.zprofile
-  source ~/.zshrc
-### end mac-components/arc
 

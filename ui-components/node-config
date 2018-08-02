@@ -1,5 +1,5 @@
 fancy_echo "Setting up a few configs ..."
-  npm config set registry http://npm.stage.ch.flipkart.com/registry/
+  npm config set registry http://10.85.59.116/artifactory/v1.0/artifacts/npm/
 
 fancy_echo "Settign ulimit to 8192 for npm installs ..."
   ulimit -n 8192
