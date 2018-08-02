@@ -12,7 +12,6 @@ mac-components/packages
 mac-components/start-services
 mac-components/compiler-and-libraries
 mac-components/pip
-mac-components/node
 mac-components/java
 mac-components/github
 mac-components/apps
