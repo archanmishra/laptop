@@ -16,4 +16,5 @@ mac-components/java
 mac-components/github
 mac-components/apps
 mac-components/ide
+ui-components/node-config
 common-components/personal-additions
